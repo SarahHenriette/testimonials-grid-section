@@ -1,0 +1,162 @@
+//Typo
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+//colors
+$moderateViolet: hsl(263, 55%, 52%);
+$veryDarkGrayish: hsl(217, 19%, 35%);
+$veryDarkBlackish: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$lightGray: hsl(0, 0%, 81%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+body {
+    p {
+        font-size: 13px;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+    background-color: $lightGrayishBlue;
+    display: flex;
+    height: 100vh;
+    #testimonials {
+        // background-color: grey;
+        height: 65%;
+        width: 75%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 20px;
+        // grid-column-gap: 10px;
+        .color-white {
+            color: $white;
+        }
+        .color-dark {
+            color: $veryDarkBlackish;
+        }
+        .double {
+            padding: 0 5% 0 5%;
+        }
+        .single {
+            padding: 0 12% 10% 12%;
+
+        }
+        .testimonial {
+            border-radius: 8px;
+
+            header {
+                // background-color: red;
+                display: flex;
+                align-items: center;
+                // height: 35px;
+                // padding-left: 7%;
+                margin-top: 20px;
+
+            }
+            header .contain-image-profile {
+                height: 25px;
+                width: 25px;
+                background-color: blue;
+                border-radius: 50%;
+                overflow: hidden;
+                border: solid 2px $white;
+                img {
+                    width: 100%;
+                }
+            }
+
+            header .contain-text-profile {
+                margin-left: 10px;
+            
+                .name-profile {
+                    margin-top: 0;
+                    margin-bottom: 2px;
+                    font-weight: 600;
+                }
+                .verified {
+                    margin-top: 0;
+                    font-size: 11px;
+                    opacity: 0.5
+                }
+            }
+    
+            .title-testimonial {
+                font-weight: 400;
+                font-size: 20px;
+                margin-top: 5px;
+
+            }
+            .text-testimonial {
+                // font-size: 10px;
+                opacity: 0.5;
+                margin: 0;
+
+            }
+        }
+        .daniel {
+            background-color: $moderateViolet;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+        }
+        .jonathan {
+            background-color: $veryDarkGrayish;
+            grid-column: 3 / span 1;
+            grid-row: 1 / span 1;
+        }
+        .jeanette {
+            background-color: $white;
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+            box-shadow: 11px 26px 30px #48556a1a;
+            .title-testimonial {
+                // padding-right: 28%;
+            }
+        }
+        .patrick {
+            background-color: $veryDarkBlackish;
+            grid-column: 2 / span 2;
+            grid-row: 2 / span 1;
+    
+        } 
+        .kira {
+            background-color: $white;
+            grid-column: 4 / span 1;
+            grid-row: 1 / span 2;
+            box-shadow: 11px 26px 30px #48556a1a;
+    
+        }
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 380px) {
+    body {
+
+        #testimonials {
+            height: auto;
+            width: 85%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8, 1fr);
+            .testimonial {
+                grid-column: 1 / span 1;
+
+            }
+            .daniel {
+                grid-row: 1 / span 2;
+            }
+            .jonathan {
+                grid-row: 3 / span 1;
+            }
+            .jeanette {
+                grid-row: 4 / span 1;
+            }
+            .patrick {
+                grid-row: 5 / span 2;
+            } 
+            .kira {
+                grid-row: 7 / span 2;
+        
+            }
+        }
+
+    }
+}
