@@ -10,6 +10,9 @@ body p {
   font-size: 13px;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
+body h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
 body #testimonials {
   height: 65%;
   width: 75%;

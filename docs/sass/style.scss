@@ -16,6 +16,9 @@ body {
         font-size: 13px;
         font-family: 'Barlow Semi Condensed', sans-serif;
     }
+    h2 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
     background-color: $lightGrayishBlue;
     display: flex;
     height: 100vh;
@@ -117,6 +120,7 @@ body {
             box-shadow: 11px 26px 30px #48556a1a;
         }
     }
+
 }
 
 @media (min-width: 0px) and (max-width: 1255px) {
