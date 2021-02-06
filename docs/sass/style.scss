@@ -10,6 +10,8 @@ $lightGray: hsl(0, 0%, 81%);
 $lightGrayishBlue: hsl(210, 46%, 95%);
 
 body {
+    display: flex;
+    flex-direction: column;
     p {
         font-size: 13px;
         font-family: 'Barlow Semi Condensed', sans-serif;
@@ -18,39 +20,26 @@ body {
     display: flex;
     height: 100vh;
     #testimonials {
-        // background-color: grey;
         height: 65%;
         width: 75%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(4, 2fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 0.5fr);
         grid-gap: 20px;
-        // grid-column-gap: 10px;
         .color-white {
             color: $white;
         }
         .color-dark {
             color: $veryDarkBlackish;
         }
-        .double {
-            padding: 0 5% 0 5%;
-        }
-        .single {
-            padding: 0 12% 10% 12%;
-
-        }
         .testimonial {
             border-radius: 8px;
-
+            padding: 29px ;
+            height: auto;
             header {
-                // background-color: red;
                 display: flex;
                 align-items: center;
-                // height: 35px;
-                // padding-left: 7%;
-                margin-top: 20px;
-
             }
             header .contain-image-profile {
                 height: 25px;
@@ -63,7 +52,6 @@ body {
                     width: 100%;
                 }
             }
-
             header .contain-text-profile {
                 margin-left: 10px;
             
@@ -78,24 +66,29 @@ body {
                     opacity: 0.5
                 }
             }
-    
             .title-testimonial {
                 font-weight: 400;
                 font-size: 20px;
                 margin-top: 5px;
-
+                z-index: 900;
             }
             .text-testimonial {
-                // font-size: 10px;
                 opacity: 0.5;
                 margin: 0;
-
+                line-height: 18px;
             }
         }
         .daniel {
             background-color: $moderateViolet;
             grid-column: 1 / span 2;
             grid-row: 1 / span 1;
+            position: relative;
+            figure {
+                position: absolute;
+                top: -10px;
+                right: 33px;
+                opacity: 0.5;
+            }
         }
         .jonathan {
             background-color: $veryDarkGrayish;
@@ -108,7 +101,7 @@ body {
             grid-row: 2 / span 1;
             box-shadow: 11px 26px 30px #48556a1a;
             .title-testimonial {
-                // padding-right: 28%;
+                width: 99%;
             }
         }
         .patrick {
@@ -122,13 +115,11 @@ body {
             grid-column: 4 / span 1;
             grid-row: 1 / span 2;
             box-shadow: 11px 26px 30px #48556a1a;
-    
         }
     }
-
 }
 
-@media (min-width: 0px) and (max-width: 380px) {
+@media (min-width: 0px) and (max-width: 1255px) {
     body {
 
         #testimonials {
@@ -138,9 +129,9 @@ body {
             grid-template-rows: repeat(8, 1fr);
             .testimonial {
                 grid-column: 1 / span 1;
-
             }
             .daniel {
+                margin-top: 70px;
                 grid-row: 1 / span 2;
             }
             .jonathan {
@@ -154,9 +145,9 @@ body {
             } 
             .kira {
                 grid-row: 7 / span 2;
+                margin-bottom: 70px;
         
             }
         }
-
     }
 }
